@@ -1,0 +1,381 @@
+warning: failed to load external entity "/work/espla/kazakh/Projects/apertium-eng-kaz/translate-to-default-equivalent.xsl"
+cannot parse /work/espla/kazakh/Projects/apertium-eng-kaz/translate-to-default-equivalent.xsl
+Temporary directory: /work/espla/kazakh/Projects/apertium-eng-kazMIQUEL2
+Checking whether 'lt-proc' is in the PATH: 
+OK
+Checking whether 'apertium-symmetrize-alignments' is in the PATH: 
+OK
+Checking whether needed GIZA++ executables are found in GIZA++ dir: 
+plain2snt.out OK
+snt2plain.out OK
+../mkcls-v2/mkcls OK
+GIZA++ OK
+line 1000
+line 2000
+END.
+line 1000
+line 2000
+END.
+Command line: apertium-apply-biling --biling /work/espla/kazakh/Projects/apertium-eng-kaz/eng-kaz.autobil.bin --withqueue 
+
+LOCALE: es_ES.UTF-8
+line 1000
+line 2000
+END.
+line 1000
+line 2000
+END.
+Command line: apertium-apply-biling --biling /work/espla/kazakh/Projects/apertium-eng-kaz/kaz-eng.autobil.bin --withqueue 
+
+LOCALE: es_ES.UTF-8
+Command line: apertium-apply-biling --biling /work/espla/kazakh/Projects/apertium-eng-kaz/eng-kaz.autobil.bin --withqueue 
+
+LOCALE: es_ES.UTF-8
+Command line: apertium-apply-biling --biling /work/espla/kazakh/Projects/apertium-eng-kaz/kaz-eng.autobil.bin --withqueue 
+
+LOCALE: es_ES.UTF-8
+Sorting input file
+Computing generalisations
+Filtering ATs
+Running linear programming
+  Finished /work/espla/kazakh/Projects/apertium-eng-kazMIQUEL2/./filtering-proportion_correct_bilphrases_thresholdextendedrangerelaxdynamic1000above2/boxesforfiltering.splitaa . Took 1 seconds
+Finished linear programming 0.00
+  Finished /work/espla/kazakh/Projects/apertium-eng-kazMIQUEL2/./filtering-proportion_correct_bilphrases_thresholdextendedrangerelaxdynamic1000above2/boxesforfiltering.splitaa . Took 0 seconds
+Finished linear programming 0.05
+  Finished /work/espla/kazakh/Projects/apertium-eng-kazMIQUEL2/./filtering-proportion_correct_bilphrases_thresholdextendedrangerelaxdynamic1000above2/boxesforfiltering.splitaa . Took 1 seconds
+Finished linear programming 0.10
+  Finished /work/espla/kazakh/Projects/apertium-eng-kazMIQUEL2/./filtering-proportion_correct_bilphrases_thresholdextendedrangerelaxdynamic1000above2/boxesforfiltering.splitaa . Took 0 seconds
+Finished linear programming 0.15
+  Finished /work/espla/kazakh/Projects/apertium-eng-kazMIQUEL2/./filtering-proportion_correct_bilphrases_thresholdextendedrangerelaxdynamic1000above2/boxesforfiltering.splitaa . Took 1 seconds
+Finished linear programming 0.20
+  Finished /work/espla/kazakh/Projects/apertium-eng-kazMIQUEL2/./filtering-proportion_correct_bilphrases_thresholdextendedrangerelaxdynamic1000above2/boxesforfiltering.splitaa . Took 1 seconds
+Finished linear programming 0.25
+  Finished /work/espla/kazakh/Projects/apertium-eng-kazMIQUEL2/./filtering-proportion_correct_bilphrases_thresholdextendedrangerelaxdynamic1000above2/boxesforfiltering.splitaa . Took 0 seconds
+Finished linear programming 0.30
+  Finished /work/espla/kazakh/Projects/apertium-eng-kazMIQUEL2/./filtering-proportion_correct_bilphrases_thresholdextendedrangerelaxdynamic1000above2/boxesforfiltering.splitaa . Took 1 seconds
+Finished linear programming 0.35
+  Finished /work/espla/kazakh/Projects/apertium-eng-kazMIQUEL2/./filtering-proportion_correct_bilphrases_thresholdextendedrangerelaxdynamic1000above2/boxesforfiltering.splitaa . Took 1 seconds
+Finished linear programming 0.40
+  Finished /work/espla/kazakh/Projects/apertium-eng-kazMIQUEL2/./filtering-proportion_correct_bilphrases_thresholdextendedrangerelaxdynamic1000above2/boxesforfiltering.splitaa . Took 0 seconds
+Finished linear programming 0.45
+  Finished /work/espla/kazakh/Projects/apertium-eng-kazMIQUEL2/./filtering-proportion_correct_bilphrases_thresholdextendedrangerelaxdynamic1000above2/boxesforfiltering.splitaa . Took 1 seconds
+Finished linear programming 0.50
+  Finished /work/espla/kazakh/Projects/apertium-eng-kazMIQUEL2/./filtering-proportion_correct_bilphrases_thresholdextendedrangerelaxdynamic1000above2/boxesforfiltering.splitaa . Took 0 seconds
+Finished linear programming 0.55
+  Finished /work/espla/kazakh/Projects/apertium-eng-kazMIQUEL2/./filtering-proportion_correct_bilphrases_thresholdextendedrangerelaxdynamic1000above2/boxesforfiltering.splitaa . Took 1 seconds
+Finished linear programming 0.60
+  Finished /work/espla/kazakh/Projects/apertium-eng-kazMIQUEL2/./filtering-proportion_correct_bilphrases_thresholdextendedrangerelaxdynamic1000above2/boxesforfiltering.splitaa . Took 1 seconds
+Finished linear programming 0.65
+  Finished /work/espla/kazakh/Projects/apertium-eng-kazMIQUEL2/./filtering-proportion_correct_bilphrases_thresholdextendedrangerelaxdynamic1000above2/boxesforfiltering.splitaa . Took 0 seconds
+Finished linear programming 0.70
+  Finished /work/espla/kazakh/Projects/apertium-eng-kazMIQUEL2/./filtering-proportion_correct_bilphrases_thresholdextendedrangerelaxdynamic1000above2/boxesforfiltering.splitaa . Took 1 seconds
+Finished linear programming 0.75
+  Finished /work/espla/kazakh/Projects/apertium-eng-kazMIQUEL2/./filtering-proportion_correct_bilphrases_thresholdextendedrangerelaxdynamic1000above2/boxesforfiltering.splitaa . Took 1 seconds
+Finished linear programming 0.80
+  Finished /work/espla/kazakh/Projects/apertium-eng-kazMIQUEL2/./filtering-proportion_correct_bilphrases_thresholdextendedrangerelaxdynamic1000above2/boxesforfiltering.splitaa . Took 0 seconds
+Finished linear programming 0.85
+  Finished /work/espla/kazakh/Projects/apertium-eng-kazMIQUEL2/./filtering-proportion_correct_bilphrases_thresholdextendedrangerelaxdynamic1000above2/boxesforfiltering.splitaa . Took 1 seconds
+Finished linear programming 0.90
+  Finished /work/espla/kazakh/Projects/apertium-eng-kazMIQUEL2/./filtering-proportion_correct_bilphrases_thresholdextendedrangerelaxdynamic1000above2/boxesforfiltering.splitaa . Took 0 seconds
+Finished linear programming 0.95
+  Finished /work/espla/kazakh/Projects/apertium-eng-kazMIQUEL2/./filtering-proportion_correct_bilphrases_thresholdextendedrangerelaxdynamic1000above2/boxesforfiltering.splitaa . Took 1 seconds
+Finished linear programming 1.00
+ATS suffix: -f-0.00.result.gz
+ATS suffix: -f-0.00.result.gz
+ATS suffix: -f-0.00.result.gz
+ATS suffix: -f-0.00.result.gz
+ATS suffix: -f-0.00.result.gz
+ATS suffix: -f-0.00.result.gz
+ATS suffix: -f-0.00.result.gz
+ATS suffix: -f-0.00.result.gz
+ATS suffix: -f-0.00.result.gz
+ATS suffix: -f-0.00.result.gz
+ATS suffix: -f-0.00.result.gz
+ATS suffix: -f-0.00.result.gz
+ATS suffix: -f-0.00.result.gz
+ATS suffix: -f-0.00.result.gz
+ATS suffix: -f-0.00.result.gz
+ATS suffix: -f-0.00.result.gz
+ATS suffix: -f-0.00.result.gz
+ATS suffix: -f-0.00.result.gz
+ATS suffix: -f-0.00.result.gz
+ATS suffix: -f-0.00.result.gz
+ATS suffix: -f-0.00.result.gz
+ATS suffix: -f-0.00.result.gz
+ATS suffix: -f-0.00.result.gz
+ATS suffix: -f-0.00.result.gz
+ATS suffix: -f-0.00.result.gz
+ATS suffix: -f-0.00.result.gz
+ATS suffix: -f-0.00.result.gz
+ATS suffix: -f-0.00.result.gz
+ATS suffix: -f-0.00.result.gz
+ATS suffix: -f-0.00.result.gz
+ATS suffix: -f-0.00.result.gz
+ATS suffix: -f-0.00.result.gz
+ATS suffix: -f-0.00.result.gz
+ATS suffix: -f-0.00.result.gz
+ATS suffix: -f-0.00.result.gz
+ATS suffix: -f-0.00.result.gz
+ATS suffix: -f-0.00.result.gz
+ATS suffix: -f-0.00.result.gz
+ATS suffix: -f-0.00.result.gz
+ATS suffix: -f-0.00.result.gz
+ATS suffix: -f-0.00.result.gz
+ATS suffix: -f-0.00.result.gz
+ATS suffix: -f-0.00.result.gz
+ATS suffix: -f-0.00.result.gz
+ATS suffix: -f-0.00.result.gz
+ATS suffix: -f-0.00.result.gz
+ATS suffix: -f-0.00.result.gz
+ATS suffix: -f-0.00.result.gz
+ATS suffix: -f-0.00.result.gz
+ATS suffix: -f-0.00.result.gz
+ATS suffix: -f-0.00.result.gz
+ATS suffix: -f-0.00.result.gz
+ATS suffix: -f-0.00.result.gz
+ATS suffix: -f-0.00.result.gz
+ATS suffix: -f-0.00.result.gz
+ATS suffix: -f-0.00.result.gz
+ATS suffix: -f-0.00.result.gz
+ATS suffix: -f-0.00.result.gz
+ATS suffix: -f-0.00.result.gz
+ATS suffix: -f-0.00.result.gz
+ATS suffix: -f-0.05.result.gz
+ATS suffix: -f-0.05.result.gz
+ATS suffix: -f-0.05.result.gz
+ATS suffix: -f-0.05.result.gz
+ATS suffix: -f-0.05.result.gz
+ATS suffix: -f-0.05.result.gz
+ATS suffix: -f-0.05.result.gz
+ATS suffix: -f-0.05.result.gz
+ATS suffix: -f-0.05.result.gz
+ATS suffix: -f-0.05.result.gz
+ATS suffix: -f-0.05.result.gz
+ATS suffix: -f-0.05.result.gz
+ATS suffix: -f-0.05.result.gz
+ATS suffix: -f-0.05.result.gz
+ATS suffix: -f-0.05.result.gz
+ATS suffix: -f-0.05.result.gz
+ATS suffix: -f-0.05.result.gz
+ATS suffix: -f-0.05.result.gz
+ATS suffix: -f-0.05.result.gz
+ATS suffix: -f-0.05.result.gz
+ATS suffix: -f-0.05.result.gz
+ATS suffix: -f-0.05.result.gz
+ATS suffix: -f-0.05.result.gz
+ATS suffix: -f-0.05.result.gz
+ATS suffix: -f-0.05.result.gz
+ATS suffix: -f-0.05.result.gz
+ATS suffix: -f-0.05.result.gz
+ATS suffix: -f-0.05.result.gz
+ATS suffix: -f-0.05.result.gz
+ATS suffix: -f-0.05.result.gz
+ATS suffix: -f-0.05.result.gz
+ATS suffix: -f-0.05.result.gz
+ATS suffix: -f-0.05.result.gz
+ATS suffix: -f-0.05.result.gz
+ATS suffix: -f-0.05.result.gz
+ATS suffix: -f-0.05.result.gz
+ATS suffix: -f-0.05.result.gz
+ATS suffix: -f-0.05.result.gz
+ATS suffix: -f-0.05.result.gz
+ATS suffix: -f-0.05.result.gz
+ATS suffix: -f-0.05.result.gz
+ATS suffix: -f-0.05.result.gz
+ATS suffix: -f-0.05.result.gz
+ATS suffix: -f-0.05.result.gz
+ATS suffix: -f-0.05.result.gz
+ATS suffix: -f-0.05.result.gz
+ATS suffix: -f-0.05.result.gz
+ATS suffix: -f-0.05.result.gz
+ATS suffix: -f-0.05.result.gz
+ATS suffix: -f-0.05.result.gz
+ATS suffix: -f-0.05.result.gz
+ATS suffix: -f-0.05.result.gz
+ATS suffix: -f-0.05.result.gz
+ATS suffix: -f-0.05.result.gz
+ATS suffix: -f-0.05.result.gz
+ATS suffix: -f-0.05.result.gz
+ATS suffix: -f-0.05.result.gz
+ATS suffix: -f-0.05.result.gz
+ATS suffix: -f-0.05.result.gz
+ATS suffix: -f-0.10.result.gz
+ATS suffix: -f-0.10.result.gz
+ATS suffix: -f-0.10.result.gz
+ATS suffix: -f-0.10.result.gz
+ATS suffix: -f-0.10.result.gz
+ATS suffix: -f-0.10.result.gz
+ATS suffix: -f-0.10.result.gz
+ATS suffix: -f-0.10.result.gz
+ATS suffix: -f-0.10.result.gz
+ATS suffix: -f-0.10.result.gz
+ATS suffix: -f-0.10.result.gz
+ATS suffix: -f-0.10.result.gz
+ATS suffix: -f-0.10.result.gz
+ATS suffix: -f-0.10.result.gz
+ATS suffix: -f-0.10.result.gz
+ATS suffix: -f-0.10.result.gz
+ATS suffix: -f-0.10.result.gz
+ATS suffix: -f-0.10.result.gz
+ATS suffix: -f-0.10.result.gz
+ATS suffix: -f-0.10.result.gz
+ATS suffix: -f-0.10.result.gz
+ATS suffix: -f-0.10.result.gz
+ATS suffix: -f-0.10.result.gz
+ATS suffix: -f-0.10.result.gz
+ATS suffix: -f-0.10.result.gz
+ATS suffix: -f-0.10.result.gz
+ATS suffix: -f-0.10.result.gz
+ATS suffix: -f-0.10.result.gz
+ATS suffix: -f-0.10.result.gz
+ATS suffix: -f-0.10.result.gz
+ATS suffix: -f-0.10.result.gz
+ATS suffix: -f-0.10.result.gz
+ATS suffix: -f-0.10.result.gz
+ATS suffix: -f-0.10.result.gz
+ATS suffix: -f-0.10.result.gz
+ATS suffix: -f-0.10.result.gz
+ATS suffix: -f-0.10.result.gz
+ATS suffix: -f-0.10.result.gz
+ATS suffix: -f-0.10.result.gz
+ATS suffix: -f-0.10.result.gz
+ATS suffix: -f-0.10.result.gz
+ATS suffix: -f-0.10.result.gz
+ATS suffix: -f-0.10.result.gz
+ATS suffix: -f-0.10.result.gz
+ATS suffix: -f-0.10.result.gz
+ATS suffix: -f-0.10.result.gz
+ATS suffix: -f-0.10.result.gz
+ATS suffix: -f-0.10.result.gz
+ATS suffix: -f-0.10.result.gz
+ATS suffix: -f-0.10.result.gz
+ATS suffix: -f-0.10.result.gz
+ATS suffix: -f-0.10.result.gz
+ATS suffix: -f-0.10.result.gz
+ATS suffix: -f-0.10.result.gz
+ATS suffix: -f-0.10.result.gz
+ATS suffix: -f-0.10.result.gz
+ATS suffix: -f-0.10.result.gz
+ATS suffix: -f-0.10.result.gz
+ATS suffix: -f-0.10.result.gz
+ATS suffix: -f-0.10.result.gz
+ATS suffix: -f-0.15.result.gz
+ATS suffix: -f-0.15.result.gz
+ATS suffix: -f-0.15.result.gz
+ATS suffix: -f-0.15.result.gz
+ATS suffix: -f-0.15.result.gz
+ATS suffix: -f-0.15.result.gz
+ATS suffix: -f-0.15.result.gz
+ATS suffix: -f-0.15.result.gz
+ATS suffix: -f-0.15.result.gz
+ATS suffix: -f-0.15.result.gz
+ATS suffix: -f-0.15.result.gz
+ATS suffix: -f-0.15.result.gz
+ATS suffix: -f-0.15.result.gz
+ATS suffix: -f-0.15.result.gz
+ATS suffix: -f-0.15.result.gz
+ATS suffix: -f-0.15.result.gz
+ATS suffix: -f-0.15.result.gz
+ATS suffix: -f-0.15.result.gz
+ATS suffix: -f-0.15.result.gz
+ATS suffix: -f-0.15.result.gz
+ATS suffix: -f-0.15.result.gz
+ATS suffix: -f-0.15.result.gz
+ATS suffix: -f-0.15.result.gz
+ATS suffix: -f-0.15.result.gz
+ATS suffix: -f-0.15.result.gz
+ATS suffix: -f-0.15.result.gz
+ATS suffix: -f-0.15.result.gz
+ATS suffix: -f-0.15.result.gz
+ATS suffix: -f-0.15.result.gz
+ATS suffix: -f-0.15.result.gz
+ATS suffix: -f-0.15.result.gz
+ATS suffix: -f-0.15.result.gz
+ATS suffix: -f-0.15.result.gz
+ATS suffix: -f-0.15.result.gz
+ATS suffix: -f-0.15.result.gz
+ATS suffix: -f-0.15.result.gz
+ATS suffix: -f-0.15.result.gz
+ATS suffix: -f-0.15.result.gz
+ATS suffix: -f-0.15.result.gz
+ATS suffix: -f-0.15.result.gz
+ATS suffix: -f-0.15.result.gz
+ATS suffix: -f-0.15.result.gz
+ATS suffix: -f-0.15.result.gz
+ATS suffix: -f-0.15.result.gz
+ATS suffix: -f-0.15.result.gz
+ATS suffix: -f-0.15.result.gz
+ATS suffix: -f-0.15.result.gz
+ATS suffix: -f-0.15.result.gz
+ATS suffix: -f-0.15.result.gz
+ATS suffix: -f-0.15.result.gz
+ATS suffix: -f-0.15.result.gz
+ATS suffix: -f-0.15.result.gz
+ATS suffix: -f-0.15.result.gz
+ATS suffix: -f-0.15.result.gz
+ATS suffix: -f-0.15.result.gz
+ATS suffix: -f-0.15.result.gz
+ATS suffix: -f-0.15.result.gz
+ATS suffix: -f-0.15.result.gz
+ATS suffix: -f-0.15.result.gz
+ATS suffix: -f-0.15.result.gz
+ATS suffix: -f-0.20.result.gz
+ATS suffix: -f-0.20.result.gz
+ATS suffix: -f-0.20.result.gz
+ATS suffix: -f-0.20.result.gz
+ATS suffix: -f-0.20.result.gz
+ATS suffix: -f-0.20.result.gz
+ATS suffix: -f-0.20.result.gz
+ATS suffix: -f-0.20.result.gz
+ATS suffix: -f-0.20.result.gz
+ATS suffix: -f-0.20.result.gz
+ATS suffix: -f-0.20.result.gz
+ATS suffix: -f-0.20.result.gz
+ATS suffix: -f-0.20.result.gz
+ATS suffix: -f-0.20.result.gz
+ATS suffix: -f-0.20.result.gz
+ATS suffix: -f-0.20.result.gz
+ATS suffix: -f-0.20.result.gz
+ATS suffix: -f-0.20.result.gz
+ATS suffix: -f-0.20.result.gz
+ATS suffix: -f-0.20.result.gz
+ATS suffix: -f-0.20.result.gz
+ATS suffix: -f-0.20.result.gz
+ATS suffix: -f-0.20.result.gz
+ATS suffix: -f-0.20.result.gz
+ATS suffix: -f-0.20.result.gz
+ATS suffix: -f-0.20.result.gz
+ATS suffix: -f-0.20.result.gz
+ATS suffix: -f-0.20.result.gz
+ATS suffix: -f-0.20.result.gz
+ATS suffix: -f-0.20.result.gz
+ATS suffix: -f-0.20.result.gz
+ATS suffix: -f-0.20.result.gz
+ATS suffix: -f-0.20.result.gz
+ATS suffix: -f-0.20.result.gz
+ATS suffix: -f-0.20.result.gz
+ATS suffix: -f-0.20.result.gz
+ATS suffix: -f-0.20.result.gz
+ATS suffix: -f-0.20.result.gz
+ATS suffix: -f-0.20.result.gz
+ATS suffix: -f-0.20.result.gz
+ATS suffix: -f-0.20.result.gz
+ATS suffix: -f-0.20.result.gz
+ATS suffix: -f-0.20.result.gz
+ATS suffix: -f-0.20.result.gz
+ATS suffix: -f-0.20.result.gz
+ATS suffix: -f-0.20.result.gz
+ATS suffix: -f-0.20.result.gz
+ATS suffix: -f-0.20.result.gz
+ATS suffix: -f-0.20.result.gz
+ATS suffix: -f-0.20.result.gz
+ATS suffix: -f-0.20.result.gz
+ATS suffix: -f-0.20.result.gz
+ATS suffix: -f-0.20.result.gz
+ATS suffix: -f-0.20.result.gz
+ATS suffix: -f-0.20.result.gz
+ATS suffix: -f-0.20.result.gz
+ATS suffix: -f-0.20.result.gz
+ATS suffix: -f-0.20.result.gz
+ATS suffix: -f-0.20.result.gz
+ATS suffix: -f-0.20.result.gz

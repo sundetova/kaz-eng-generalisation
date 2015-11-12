@@ -1,0 +1,24 @@
+MT evaluation scorer began on 2015 Feb 18 at 05:16:20
+command line:  ./mteval-v13a.pl -s eng.xml -t kaz-trident.xml -r kaz-ref.xml -b
+  Evaluation of eng-to-kaz translation using:
+    src set "apertium" (1 docs, 199 segs)
+    ref set "apertium" (1 refs)
+    tst set "apertium" (1 systems)
+
+
+BLEU score = 0.0506 for system "apertium-eng-kaz"
+
+# ------------------------------------------------------------------------
+
+Individual N-gram scoring
+        1-gram   2-gram   3-gram   4-gram   5-gram   6-gram   7-gram   8-gram   9-gram
+        ------   ------   ------   ------   ------   ------   ------   ------   ------
+ BLEU:  0.3097   0.0721   0.0272   0.0108   0.0044   0.0008   0.0004   0.0002   0.0001  "apertium-eng-kaz"
+
+# ------------------------------------------------------------------------
+Cumulative N-gram scoring
+        1-gram   2-gram   3-gram   4-gram   5-gram   6-gram   7-gram   8-gram   9-gram
+        ------   ------   ------   ------   ------   ------   ------   ------   ------
+
+ BLEU:  0.3097   0.1494   0.0847   0.0506   0.0310   0.0168   0.0099   0.0062   0.0040  "apertium-eng-kaz"
+MT evaluation scorer ended on 2015 Feb 18 at 05:16:20

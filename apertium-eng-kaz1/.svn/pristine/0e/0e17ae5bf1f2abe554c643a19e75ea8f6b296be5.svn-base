@@ -1,0 +1,411 @@
+ubuntu@ubuntu-virtual-machine:~/Source/apertium-eng-kaz$ perl  ../apertium-eval-translator/apertium-eval-translator-line.pl -t translatedVersion.txt -r cleanVersion.txt
+perl  ../apertium-eval-translator/apertium-eval-translator-line.pl -t translatedVersion.txt -r texts/kazakhstan1.kaz.txt 
+
+Statistics about input files
+-------------------------------------------------------
+Number of words in reference: 490
+Number of words in test: 381
+Number of unknown words (marked with a star) in test: 28
+Percentage of unknown words: 7.35 %
+
+Results when removing unknown-word marks (stars)
+-------------------------------------------------------
+Edit distance: 404
+Word error rate (WER): 82.45 %
+Number of position-independent correct words: 87
+Position-independent word error rate (PER): 82.24 %
+
+ubuntu@ubuntu-virtual-machine:~/Source/apertium-eng-kaz$ 
+
+firespeaker> yeah, but linguistics ≠ transducer
+<karan__> spectie : i can write my own piece of code for that , we don't need to use a tool for that.
+<spectie> well, i cll it morphotactic, because it is the representation before 'phonology' is applied
+<spectie> karan, apertium does not do generate-and-rank online
+<firespeaker> spectie: what language is your 5.abl example?
+<karan__> it's just searching in a text file, one can do hashing and load as a pickle object
+<spectie> firespeaker, kazakh i think
+<firespeaker> spectie: a phonological representation means the underlying form
+<firespeaker> spectie: okay
+<firespeaker> I'll try to generalise it though
+<spectie> karan, we like efficient code
+<spectie> we like O(n)
+<spectie> and under
+* ergaurav2 has quit (Quit: Leaving)
+* ergaurav2 (~ergaurav2@14.139.82.6) has joined #apertium
+<karan__> specte. yeah !! that's must for an online system. so we can simply keep unigrams as in morphological dictionary with frequency, and pick the one with higher frequency for now.
+* prth (~prth@223.196.216.43) has joined #apertium
+<firespeaker> spectie: жақсы келетін еді’ ‘(the) good (ones) would come’.
+<firespeaker> where did you get that example?
+<firespeaker> , жақсы китап ‘good book’
+<firespeaker> :\
+<Aida> firespeaker, I tried, thank you!
+<firespeaker> Aida: did you get a result?
+<Aida> Is it translatedVersion is text after apertium -d. eng-kaz?
+<Aida> and cleanVer.txt is just text in English?
+<karan__> specite: for this we just need to load the dictionary and then searchin for it will be just O(1), i don't know who efficient it will be for disambiquating
+<karan__> i can try for a text
+<Aida> firespeaker, yes
+<Aida> I got:
+<Aida> perl  ../apertium-eval-translator/apertium-eval-translator-line.pl -t first_diag.txt -r kazakhstan1.raw.txt
+<Aida> Use of uninitialized value in addition (+) at ../apertium-eval-translator/apertium-eval-translator-line.pl line 77, <REF> line 13.
+<Aida> Statistics about input files
+<Aida> -------------------------------------------------------
+<Aida> Number of words in reference: 490
+<Aida> Number of words in test: 381
+<Aida> Number of unknown words (marked with a star) in test: 28
+<Aida> Percentage of unknown words: 7.35 %
+<Aida> Results when removing unknown-word marks (stars)
+<Aida> -------------------------------------------------------
+<Aida> Edit distance: 404
+<Aida> Word error rate (WER): 82.45 %
+<Aida> Number of position-independent correct words: 87
+<Aida> Position-independent word error rate (PER): 82.24 %
+<spectie> firespeaker, i made it up
+<spectie> firespeaker, i told you i was going to make stuff up
+<spectie> Aida, please use pastebin
+<Aida> ok, sorry :)
+<firespeaker> spectie: what is it all cop.ger_past ??
+<firespeaker> *why
+<firespeaker> Aida: 82.24% is really high
+<firespeaker> Aida: so your goal will be to get that much lower\
+<firespeaker> :)
+<Aida> firespeaker, Is it translatedVersion is text after apertium -d. eng-kaz?and cleanVer.txt is just text in English?
+<firespeaker> spectie: hrm, is that really what the transducers return ?  :\
+<spectie> firespeaker, yes
+<firespeaker> Aida: hm, no
+<spectie> Aida, you didn't remove all diagnostics
+<spectie> Aida, righ?
+<spectie> right ?
+<firespeaker> Aida: if it's Kazakh→English, then you first translate the text using the apertium -d kaz-eng, and that's translatedVersion
+<Aida> which diagnostics?
+<spectie> or did i miss something ?
+<spectie> Aida, @ # *
+<Aida> it is eng-kaz
+<firespeaker> Aida: then the clean version is when you take the output of the translation and make it good English
+* shahofblah (~admin@59.178.169.160) has joined #apertium
+<firespeaker> ah, then it's just the other way aroun d
+<Aida> firespeaker, by hand?
+<Aida> or adding vocabulary and etc.?
+<firespeaker> you clean the text by hand
+<firespeaker> so that it's a good translation
+
+
+cat texts/kazakhstan1.eng.txt | apertium -d . eng-kaz-morph | tr ' ' '\012' | grep "<det>" | sort -f  | uniq -c 
+
+
+
+cat texts/kazakhstan1.eng.txt | apertium -d . eng-kaz-morph | tr ' ' '\012' | grep -c "<det>" | sort -f  | uniq -c 
+
+ cat texts/kazakhstan1.eng.txt | apertium -d . eng-kaz-morph | tr ' ' '\012' | egrep -c "det.*n" | sort -f  | uniq -c
+
+cat countr.txt | egrep "l>"| awk 'BEGIN{FS="<l>"} {print $3}'
+
+
+http://wiki.apertium.org/wiki/English_and_Kazakh/Work_plan_%28GSOC_2014%29
+
+http://pastebin.com/eSGvUm3Y
+
+
+
+
+
+<!--- script-->
+
+DIX=/home/fran/source/apertium/incubator/apertium-eng-kaz/apertium-eng-kaz.eng.dix
+BIN=/home/fran/source/apertium/incubator/apertium-eng-kaz/eng-kaz.automorf.bin
+cat eng.crp.txt | cut -f2 | grep -v '>(' | sed 's/&lt;/</g' | sed 's/&gt;/>/g' | apertium-destxt | lt-proc -w $BIN | apertium-retxt | sed 's/\$\W*\^/$\n^/g' > /tmp/eng.coverage.txt
+
+EDICT=`cat $DIX | grep '<e lm' | wc -l`;
+EPAR=`cat $DIX | grep '<pardef n' | wc -l`;
+TOTAL=`cat /tmp/eng.coverage.txt | wc -l`
+KNOWN=`cat /tmp/eng.coverage.txt | grep -v '*' | wc -l`
+COV=`calc $KNOWN / $TOTAL`;
+DATE=`date`;
+
+echo -e $DATE"\t"$EPAR":"$EDICT"\t"$KNOWN"/"$TOTAL"\t"$COV >> history.log
+tail -1 history.log
+
+<!-- -->
+
+tie> for the kazakh one you will need to add words which are not there
+<Aida> yes
+<spectie> Serpis, a veure
+<spectie> Serpis, ./autogen.sh
+<spectie> make
+<inariksit> spectie: on the bright side, you'll walk past this every day :-D http://listenmaa.fi/b/franssons_rum.jpg
+<spectie> i intenta de nou
+<spectie> haha!
+<begiak> apertium: spectre360 * 52240: /incubator/apertium-eng-kaz/apertium-eng-kaz.eng-kaz.dix: ization->isation
+* kalyanee (~kalyanee@101.221.204.29) has joined #apertium
+* kalyanee_ has quit (Ping timeout: 252 seconds)
+<kalyanee>  krvoje:ya   this verb always have the meaning "to be", or "was" etc
+<krvoje> :)
+<begiak> apertium: spectre360 * 52241: /incubator/apertium-eng-kaz/apertium-eng-kaz.eng-kaz.dix: more fixes in bidix
+<krvoje> then the most appropriate tag for it would be "vbser"
+<krvoje> which is the standard apertium's tag for verbs to be
+<krvoje> you can make a separate paradigm for it
+<Serpis> Specti, eres un sol, funciona!!
+<Serpis> gràcies
+<spectie> Serpis, de res!
+<Serpis> suposadament, si en comptes de posar "ceci" pose un text, llavors detectarà si hi ha errors?
+<spectie> analitzarà el text
+<spectie> Aida, i'm making a few fixes in the bilingual dictionary
+<Aida> ok, thank you
+<Aida> spectie, where should I paste script? 
+<kalyanee> tnks
+<kalyanee> we did that
+<Serpis> com puc fer una prova de traducció? Per exemple, vull que traduisca "la maison est à moi"
+* krvoje has quit (Quit: Leaving)
+<spectie> Serpis, echo "la maison est à moi" | apertium -d . fr-ca
+<Serpis> okis
+<spectie> Aida, in a file called 'coverage.sh'
+* tenebr050 (~Atomic@117.227.199.79) has joined #apertium
+<Aida> I did it
+<Aida> I can't run it :/
+<spectie> Aida, you need to change the paths
+<spectie> did you do that ?
+<Aida> yes, but I have mistake
+<spectie> can you show me how you changed it ?
+<spectie> e.g. pastebin the script
+<Aida> http://pastebin.com/ELZyCdKk
+<begiak> [ DIX=apertium-eng-kaz.eng.dix BIN=eng-kaz.automorf.bin cat eng.crp.txt | cut -f - Pastebin.com ]
+* tenebr050 has quit (Client Quit)
+* sirex has quit (Quit: Leaving.)
+<spectie> ok, you need to put the script in a new directory
+<spectie> with the corpus
+<spectie> and i would use the full paths to all files
+<spectie> e.g. instead of eng.crp.txt
+<spectie> i would put:
+<spectie>  /home/fran/.../eng.crp.txt
+<spectie> where ... is the directory you made
+<Aida> and then run it like ".coverage.sh"?
+
+
+
+ it's good!
+<spectie> to make a frequency list, you can use this:
+<spectie>  
+<spectie> cat /tmp/eng.coverage.txt | cut -f2 -d'^' | cut -f1 -d'/' | sort -f | uniq -c | sort -gr  | grep -v '[0-9] [0-9]' > eng.hitparade.txt
+<spectie>  
+<spectie> and then to find the most frequent unknown words you can do:
+<spectie> cat eng.hitparade.txt | apertium-destxt | lt-proc eng-kaz.automorf.bin | apertium-retxt | grep '\*' | more
+
+
+http://pastebin.com/raw.php?i=P4kMvuSG
+
+
+
+ cat nn.txt|awk '{print "<e><p><l>" $1 "<s n=\"adj\"/></l><r>" $2 "<s n=\"adj\"/><s n=\"subst\"/></r></p></e>"}'>newd.txt
+
+ cat nn.txt|awk '{print "<e><p><l>" $1 "<s n=\"n\"/></l><r>" $2 "<s n=\"n\"/></r></p></e>"}'>newd.txt
+
+ cat unk.txt|awk '{print "<e><p><l>" $1 "<s n=\"np\"/><s n=\"ant\"/><s n=\"m\"/></l><r>" $2 "<s n=\"np\"/><s n=\"ant\"/><s n=\"m\"/></r></p></e>"}'>newdix.txt
+
+ cat nnn.txt|awk '{print "<e><p><l>" $1 "<s n=\"vblex\"/></l><r>" $2 "<s n=\"v\"/><s n=\"iv\"/></r></p></e>"}'>newdix.txt
+
+<e lm="reductionism" i=""><i>reductionism</i><par n="house__n"/></e>
+
+cat nn. txt | awk '{print "<e lm=\""$1"\" i=\"\"><i>" $1 "</i><par n=\"expensive__adj\"/></e>"}'
+
+cat nnn.txt|grep "\"tv\""|awk 'BEGIN {FS="l>"} {print $2}'| cut -f1 -d '<'|apertium -d. eng-kaz|grep "#"| awk 'BEGIN {FS="#"} {print $2":"$2" V-TV ; ! "}'|sort -u
+
+
+
+
+bitextor -L ~/apertium-testing/logs/ -x -u http://www.kaznu.kz -d ~/apertium-testing/ak/    -v en-kk.dic en kk
+
+
+cat newdix.txt | egrep "<l>"| awk 'BEGIN{FS="<l>"} {print $2}'| apertium -d. eng-kaz|egrep "#"|awk 'BEGIN{FS="#"} {print $2}'
+
+cat newdix.txt | egrep "<l>"| awk 'BEGIN{FS="<l>"} {print $2}'| apertium -d. eng-kaz|egrep "#"|awk 'BEGIN{FS="#"} {print ""$2":"$2" ADV ; !\"Use/MT\""}'
+
+ cat newd.txt | egrep "<l>"| awk 'BEGIN{FS="<l>"} {print $2}'| apertium -d. eng-kaz|egrep "#"
+
+awk 'BEGIN{FS="#"} {print ""$2":"$2"  ; !\"Use/MT\""}'
+
+
+$ cat eng.crp.txt | apertium -d ~/source/apertium/incubator/apertium-eng-kaz/ eng-kaz-morph | sed 's/\$\W*\^/$\n^/g' | cut -f2 -d'^' | cut -f1 -d'/'  | grep -v '^$' | sort -f | uniq -c | sort -gr
+
+ head -1000 texts/corpus4355.en | apertium -d ~/apertium-testing/apertium-eng-kaz/ eng-kaz-morph | sed 's/\$\W*\^/$\n^/g' | grep '\*' | cut -f2 -d'^' | cut -f1 -d'/'  | grep -v '^$' | sort -f | uniq -c | sort -gr   | grep -v '[0-9] [0-9]' | apertium-destxt | lt-proc ~/apertium-testing/apertium-eng-kaz/.deps/eng.automorf.bin | grep -v '\*'
+
+<spectie> this will give the words that are not in eng-kaz bidix, but _are_ in the english analyser
+<spectie> then we can use CG to merge analyses
+
+
+<spectie> http://pastebin.com/uBsr3vuH
+<begiak> [ $ cat /tmp/merge-analyses.cg SECTION SUBSTITUTE (n sg) (n) (n) (0C (n sg) - Pastebin.com ]
+<spectie> a short CG file to merge some analyses
+<spectie> $ cg-comp /tmp/merge-analyses.cg /tmp/merge-analyses.bin
+<spectie> Sections: 1, Rules: 12, Sets: 26, Tags: 23
+<spectie> $ cat texts/corpus4355.en | apertium -d ~/apertium-testing/apertium-eng-kaz/ eng-kaz-morph | sed 's/\$\W*\^/$\n^/g' | grep '\*' | cut -f2 -d'^' | cut -f1 -d'/'  | grep -v '^$' | sort -f | uniq -c | sort -gr   | grep -v '[0-9] [0-9]' | apertium-destxt | lt-proc -w ~/apertium-testing/apertium-eng-kaz/.deps/eng.automorf.bin | grep -v '\*' | cg-proc merge-analyses.bin  | apertium-retxt
+<spectie> then you can run it like this
+<spectie> if you want to remove ambiguous words (easier), you can do:
+<spectie> $ head -1000 corpora/eng.crp.txt | apertium -d ~/Source/apertium-eng-kaz/ eng-kaz-morph | sed 's/\$\W*\^/$\n^/g' | grep '\*' | cut -f2 -d'^' | cut -f1 -d'/'  | grep -v '^$' | sort -f | uniq -c | sort -gr   | grep -v '[0-9] [0-9]' | apertium-destxt | lt-proc -w ~/Source/apertium-eng-kaz/.deps/eng.automorf.bin | grep -v '\*' | cg-proc /tmp/merge-analyses.bin  | apertium-retxt | grep -v '\/.*\/.*\/.*\/'
+
+
+<spectie> then you can do, e.g.
+<spectie> $ head -1000 corpora/eng.crp.txt | apertium -d ~/Source/apertium-eng-kaz/ eng-kaz-morph | sed 's/\$\W*\^/$\n^/g' | grep '\*' | cut -f2 -d'^' | cut -f1 -d'/'  | grep -v '^$' | sort -f | uniq -c | sort -gr   | grep -v '[0-9] [0-9]' | apertium-destxt | lt-proc -w ~/Source/apertium-eng-kaz/.deps/eng.automorf.bin | grep -v '\*' | cg-proc /tmp/merge-analyses.bin  | apertium-retxt | grep -v '\/.*\/.*\/.*\/' | cut -f4 -d'/' | cut -f1 -d'$' | sed 's/<\([a-z0-9A-Z]\+\)>/<s n="\1"\/>/g'
+<spectie>  
+<spectie> to get the left side of the bidix
+
+<spectie> then sort -u
+
+and you can get the whole bidix using:
+<spectie> http://pastebin.com/7a752JbF
+<begiak> [ $ head -1000 eng.crp.txt | apertium -d ~/source/apertium/incubator/apertium-eng- - Pastebin.com ]
+
+sudo cat corpora/eng.crp.txt | apertium -d ~/Source/apertium-eng-kaz/ eng-kaz-morph | sed 's/\$\W*\^/$\n^/g' | grep '\*' | cut -f2 -d'^' | cut -f1 -d'/'  | grep -v '^$' | sort -f | uniq -c | sort -gr   | grep -v '[0-9] [0-9]' | apertium-destxt | lt-proc -w ~/Source/apertium-eng-kaz/.deps/eng.automorf.bin | grep -v '\*' | cg-proc ~/Source/apertium-eng-kaz/merge-analyses.bin  | apertium-retxt | grep -v '\/.*\/.*\/.*\/' | cut -f4 -d'/' | cut -f1 -d'$' | sed 's/<\([a-z0-9A-Z]\+\)>/<s n="\1"\/>/g' | sort -u | ~/Source/apertium-eng-kaz/pasten.py 2 | sed 's/^/<e><p><l>/g' | sed 's/$/<\/r><\/p><\/e>/g' | sed 's/\t/<\/l><r>/1' | sed 's/\t//g'
+
+
+sudo head -1000 corpora/eng.crp.txt | apertium -d ~/Source/apertium-eng-kaz/eng-kaz-morph | sed 's/\$\W*\^/$\n^/g' | grep '\*' | cut -f2 -d'^' | cut -f1 -d'/'  | grep -v '^$' | sort -f | uniq -c | sort -gr   | grep -v '[0-9] [0-9]' | apertium-destxt | lt-proc -w ~/Source/apertium-eng-kaz/.deps/eng.automorf.bin | grep -v '\*' | cg-proc ~/Source/apertium-eng-kaz/merge-analyses.bin | apertium-retxt | grep -v '\/.*\/.*\/.*\/' | cut -f4 -d'/' | cut -f1 -d'$' | sed 's/<\([a-z0-9A-Z]\+\)>/<s n="\1"\/>/g' | sort -u | ~/Source/apertium-eng-kaz/pasten.py 2 | sed 's/^/<e><p><l>/g' | sed 's/$/<\/r><\/p><\/e>/g' | sed 's/\t/<\/l><r>/1' | sed 's/\t//g'
+
+
+
+
+
+head -1000 texts/corpus4355.en | apertium -d ~/apertium-testing/apertium-eng-kaz/ eng-kaz-morph | sed 's/\$\W*\^/$\n^/g' | grep '\*' | cut -f2 -d'^' | cut -f1 -d'/'  | grep -v '^$' | sort -f | uniq -c | sort -gr   | grep -v '[0-9] [0-9]' | apertium-destxt | lt-proc -w ~/apertium-testing/apertium-eng-kaz/.deps/eng.automorf.bin | grep -v '\*' | cg-proc merge-analyses.bin  | apertium-retxt | grep -v '\/.*\/.*\/.*\/' | cut -f4 -d'/' | cut -f1 -d'$' | sed 's/<\([a-z0-9A-Z]\+\)>/<s n="\1"\/>/g'
+
+
+sudo head -1000 texts/prince.eng.txt | apertium -d ~/apertium-testing/apertium-eng-kaz/eng-kaz-morph | sed 's/\$\W*\^/$\n^/g' | grep '\*' | cut -f2 -d'^' | cut -f1 -d'/'  | grep -v '^$' | sort -f | uniq -c | sort -gr   | grep -v '[0-9] [0-9]' | apertium-destxt | lt-proc -w ~/apertium-testing/apertium-eng-kaz/.deps/eng.automorf.bin | grep -v '\*' | cg-proc ~/apertium-testing/apertium-eng-kaz/merge-analyses.bin | apertium-retxt | grep -v '\/.*\/.*\/.*\/' | cut -f4 -d'/' | cut -f1 -d'$' | sed 's/<\([a-z0-9A-Z]\+\)>/<s n="\1"\/>/g' | sort -u | ~/apertium-testing/apertium-eng-kaz/pasten.py 2 | sed 's/^/<e><p><l>/g' | sed 's/$/<\/r><\/p><\/e>/g' | sed 's/\t/<\/l><r>/1' | sed 's/\t//g'
+
+sudo head -1000 texts/corpus4355.en | apertium -d ~/apertium-testing/apertium-eng-kaz/eng-kaz-morph | sed 's/\$\W*\^/$\n^/g' | grep '\*' | cut -f2 -d'^' | cut -f1 -d'/'  | grep -v '^$' | sort -f | uniq -c | sort -gr   | grep -v '[0-9] [0-9]' | apertium-destxt | lt-proc -w ~/apertium-testing/apertium-eng-kaz/.deps/eng.automorf.bin | grep -v '\*' | cg-proc ~/apertium-testing/apertium-eng-kaz/merge-analyses.bin | apertium-retxt | grep -v '\/.*\/.*\/.*\/' | cut -f4 -d'/' | cut -f1 -d'$' | sed 's/<\([a-z0-9A-Z]\+\)>/<s n="\1"\/>/g' | sort -u | ~/apertium-testing/apertium-eng-kaz/pasten.py 2 | sed 's/^/<e><p><l>/g' | sed 's/$/<\/r><\/p><\/e>/g' | sed 's/\t/<\/l><r>/1' | sed 's/\t//g'
+
+sudo cat texts/texts.rus | apertium -d ~/apertium-testing/apertium-rus/rus-morph | sed 's/\$\W*\^/$\n^/g' | grep '\*' | cut -f2 -d'^' | cut -f1 -d'/'  | grep -v '^$' | sort -f | uniq -c | sort -gr   | grep -v '[0-9] [0-9]' | apertium-destxt | lt-proc -w ~/apertium-testing/apertium-rus/rus.automorf.bin | grep -v '\*' | cg-proc ~/apertium-testing/apertium-kaz-rus/merge-analyses.bin | apertium-retxt | grep -v '\/.*\/.*\/.*\/' | cut -f4 -d'/' | cut -f1 -d'$' | sed 's/<\([a-z0-9A-Z]\+\)>/<s n="\1"\/>/g' | sort -u | ~/apertium-testing/apertium-kaz-rus/pasten.py 2 | sed 's/^/<e><p><l>/g' | sed 's/$/<\/r><\/p><\/e>/g' | sed 's/\t/<\/l><r>/1' | sed 's/\t//g'
+
+
+!!!!!!!!!!!!!!!
+cat texts/corpus4355.en | apertium -d ~/apertium-testing/apertium-eng-kaz/ eng-kaz-morph | sed 's/\$\W*\^/$\n^/g' | grep '\*' | cut -f2 -d'^' | cut -f1 -d'/'  | grep -v '^$' | sort -f | uniq -c | sort -gr   | grep -v '[0-9] [0-9]' | apertium-destxt | lt-proc -w ~/apertium-testing/apertium-eng-kaz/.deps/eng.automorf.bin | grep -v '\*' | cg-proc merge-analyses.bin  | apertium-retxt| grep -v '\/.*\/.*\/.*\/'| cut -f4 -d'/' | cut -f1 -d'$' | sed 's/<\([a-z0-9A-Z]\+\)>/<s n="\1"\/>/g'
+
+cat ~/apertium-testing/apertium-rus/texts/murmansk.raw.txt | apertium -d  ~/apertium-testing/apertium-rus/ rus-morph | sed 's/\$\W*\^/$\n^/g' | grep '\*' | cut -f2 -d'^' | cut -f1 -d'/'  | grep -v '^$' | sort -f | uniq -c | sort -gr   | grep -v '[0-9] [0-9]' | apertium-destxt | lt-proc -w ~/apertium-testing/apertium-rus/rus.automorf.bin | grep '\*' | apertium-retxt| grep -v '\/.*\/.*\/.*\/'| cut -f2 -d'*' | cut -f1 -d'$' | sed 's/<\([a-z0-9A-Z]\+\)>/<s n="\1"\/>/g'| sort -u 
+
+
+| ~/apertium-testing/apertium-kaz-rus/pasten.py 2 | sed 's/^/<e><p><l>/g' | sed 's/$/<\/r><\/p><\/e>/g' | sed 's/\t/<\/l><r>/1' | sed 's/\t//g'
+
+
+<spectre> echo need to | lt-proc .deps/eng.automorf.bin
+
+
+$ cg-comp ~/Source/apertium-kaz-rus/merge-analyses.cg ~/Source/apertium-kaz-rus/merge-analyses.bin
+
+chmod +x /home/apertium/apertium/apertium-kaz-rus/pasten.py
+
+chmod +x /home/apertium/apertium-testing/apertium-eng-kaz/pasten.py
+
+
+chmod +x /home/ubuntu/Source/apertium-kaz-rus/pasten.py
+
+
+<Aida> your list is over
+<spectre> ok
+<Aida> now I'm doing last 111 verbs
+<spectre> ok
+<spectre> finish those
+<spectre> and then i think for the next week you should concentrate on rules
+<Aida> spectre, when should I start to prepare evaluation?
+<spectre> find a nice long text
+<spectre> and try and fix the rules
+<spectre> in fact, one idea:
+<spectre> find two texts
+<spectre> in one of the texts you should add all the words and write rules
+<spectre> and in the other text you should just write rules (and leave the unknown words)
+<spectre> if you make them two texts of 500 words then this would make a nice midterm evaluation
+<spectre> and you can just work on that for the next two weeks
+<Aida> ok
+
+
+cat texts/movie.eng.txt  | apertium -d . eng-kaz > /tmp/movie.eng-kaz.txt
+../apertium-eval-translator/apertium-eval-translator.pl -t /tmp/movie.eng-kaz.txt -r texts/movie.kaz.txt
+
+cat texts/business_movie.eng.txt  | apertium -d . eng-kaz > /tmp/business_movie.eng-kaz.txt
+../apertium-eval-translator/apertium-eval-translator.pl -t /tmp/business_movie.eng-kaz.txt -r texts/business_movie.kaz.txt
+
+cat ../akorda/akorda.true.en |apertium -d. eng-kaz > translatedVersion.txt
+../apertium-eval-translator/apertium-eval-translator.pl -t translatedVersion.txt -r ../akorda/akorda.true.kz 
+
+
+echo "gets all of the money that will be needed to pay for the actors and the equipment. " | apertium -d. eng-kaz
+
+pertium: spectre360 * 55029: /branches/papers/codeswitch-cltw-2014/: codeswitch.pdf, codeswitch_camera_ready.tex: some fixes
+* selimcan (~selimcan@89.232.118.17) has joined #apertium
+<spectie> wb selimcan !
+<selimcan> Hey spectie !
+<selimcan> Hi everyone
+* onny (~onny@anon-38-20.vpn.ipredator.se) has joined #apertium
+* beknazar has quit (Ping timeout: 240 seconds)
+<spectie> :)
+<begiak> apertium: spectre360 * 55030: /branches/papers/codeswitch-cltw-2014/: codeswitch.pdf, codeswitch_camera_ready.tex: update
+* v21 has quit (Ping timeout: 264 seconds)
+<Aida> spectie, should I continue to add vocabulary?
+<spectie> yes, but we need to talk about testvoc too
+<Aida> ok, how to do testvoc?
+<spectie> go into the directory dev/testvoc
+<spectie> type:
+<spectie> bash testvoc.sh eng-kaz
+<spectie> it should give you a printout
+<spectie> of the number of @ and # errors
+<spectie> there should be no @ errors as the dictionary is trimmed
+<spectie> if you do:
+<spectie>  
+<spectie> cat /tmp/eng-kaz.testvoc  | grep '> *#'
+<spectie> you will see all the # errors
+<Aida> yes, no @
+<spectie> so, some of them are probably because you are missing "default" rules
+<spectie> e.g. a rule that matches a word out of context
+<begiak> apertium: selimcan * 55031: /nursery/apertium-tat-rus/texts/: text2.tat.txt (+), text2.rus.txt (+), text2.posted.txt (+): add another 500 word text
+* jacobEo (~Jacob@94.144.63.98) has joined #apertium
+* sirex has quit (Quit: Leaving.)
+<spectie> Aida, did you get it ?
+<Aida> yes
+<Aida> is it checking from corpora?
+<spectie> no
+<spectie> it expands the english dictionary
+<spectie> and runs every lexical unit through the translator
+<Aida> why I getting #?
+<spectie> because in some cases you don't have rules that deal with single words ?
+* rm_ (0e8b5206@gateway/web/freenode/ip.14.139.82.6) has joined #apertium
+<spectie> maybe some words aren't in kaz.lexc too
+<Aida> for some verbs
+* rm_ is now known as r
+* tenebr050 has quit (Ping timeout: 264 seconds)
+* r is now known as Guest39784
+* Guest39784 is now known as raveesh_
+<spectie> Aida, yes
+* Sereni (~sereni@92.255.165.122) has joined #apertium
+<spectie> Aida,
+cat /tmp/eng-kaz.testvoc  | grep '> *#' > /tmp/kaz-words0
+cat /tmp/eng-kaz.testvoc  | grep '> *#' | cut -f2 -d'#' | cut -f1 -d'\' | apertium-destxt | lt-proc ~/Source/apertium-kaz/kaz.automorf.bin  > /tmp/kaz-words
+paste /tmp/kaz-words /tmp/kaz-words0  | grep '\*'| sort -u 
+
+
+
+ubuntu@ubuntu-virtual-machine:~/Source/apertium-eng-kaz/dev/testvoc$ cat /tmp/eng-kaz.testvoc  | grep '> *#' > unkwords.txt
+ubuntu@ubuntu-virtual-machine:~/Source/apertium-eng-kaz/dev/testvoc$ cat unkwords.txt| egrep "<np><ant><m>"| sort -u > unknown.txt
+ubuntu@ubuntu-virtual-machine:~/Source/apertium-eng-kaz/dev/testvoc$ cat unkwords.txt| egrep "<np><ant><f>"| sort -u > unknown.txt
+ubuntu@ubuntu-virtual-machine:~/Source/apertium-eng-kaz/dev/testvoc$ cat unknown.txt | egrep "#"| awk 'BEGIN{FS="#"} {print $2}'> unkwords.txt
+ubuntu@ubuntu-virtual-machine:~/Source/apertium-eng-kaz/dev/testvoc$ bash testvoc.sh eng-kaz
+
+cat texts/kazakhstan1.kaz.txt | apertium -d ~/Source/apertium-kaz/ kaz-morph | sed 's/\$\W*\^/$\n^/g' | grep '\*' | cut -f2 -d'^' | cut -f1 -d'/'  | grep -v '^$'^C sort -f | uniq -c | sort -gr
+
+bitextor -u http://www.primeminister.kz/ -d ~/apertium-testing/    -v en-kk.dic eng kaz
+
+
+at adj.txt|grep "\"n\""|awk 'BEGIN {FS="l>"} {print $2}'| cut -f1 -d '<'|apertium -d. eng-kaz|grep "#"| awk 'BEGIN {FS="#"} {print $2":"$2" ADV ; ! "}'|sort -u 
+
+
+rus-kaz
+
+cat verb.txt | awk '$3=="0" && $4=="1"   <p><l>$2<s n=\"v\"/><s n=\"tv\"/></l>        <r>$1<s n=\"vblex\"/><s n=\"impf\"/><s n=\"tv\"/></r></p><par n=\"impf__verb\"/></e>
+
+cat verb.txt | awk '$3=="1" && $4=="1"   <p><l>$2<s n=\"v\"/><s n=\"tv\"/></l>        <r>$1<s n=\"vblex\"/><s n=\"perf\"/><s n=\"tv\"/></r></p><par n=\"perf__verb\"/></e>
+
+ cat unk.txt|awk '{print "<e><p><l>" $1 "<s n=\"np\"/><s n=\"ant\"/><s n=\"m\"/></l><r>" $2 "<s n=\"np\"/><s n=\"ant\"/><s n=\"m\"/></r></p></e>"}'>newdix.txt 
+
+ cat nnn.txt|awk '{print "<e><p><l>" $1 "<s n=\"adv\"/></l><r>" $2 "<s n=\"adv\"/></r></p></e>"}'>newdix.txt  
+ 
+
+
+cat ~/apertium-testing/apertium-rus/texts/murmansk.raw.txt | apertium -d. ~/apertium-testing/apertium-kaz-rus/ rus-kaz-morph | sed 's/\$\W*\^/$\n^/g' | grep '\*' | cut -f2 -d'^' | cut -f1 -d'/'  | grep -v '^$' | sort -f | uniq -c | sort -gr   | grep -v '[0-9] [0-9]' | apertium-destxt | lt-proc -w ~/apertium-testing/apertium-rus/rus.automorf.bin | grep -v '\*' | cg-proc merge-analyses.bin  | apertium-retxt | grep -v '\/.*\/.*\/.*\/' | cut -f4 -d'/' | cut -f1 -d'$' | sed 's/<\([a-z0-9A-Z]\+\)>/<s n="\1"\/>/g'
+
+
+cat texts/corpus4355.en | apertium -d ~/apertium-testing/apertium-eng-kaz/ eng-kaz-morph | sed 's/\$\W*\^/$\n^/g' | grep '\*' | cut -f2 -d'^' | cut -f1 -d'/'  | grep -v '^$' | sort -f | uniq -c | sort -gr   | grep -v '[0-9] [0-9]' | apertium-destxt | lt-proc -w ~/apertium-testing/apertium-eng-kaz/.deps/eng.automorf.bin | grep -v '\*' | cg-proc merge-analyses.bin  | apertium-retxt| grep -v '\/.*\/.*\/.*\/'| cut -f4 -d'/' | cut -f1 -d'$' | sed 's/<\([a-z0-9A-Z]\+\)>/<s n="\1"\/>/g'
+

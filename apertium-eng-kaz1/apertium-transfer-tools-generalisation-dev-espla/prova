@@ -1,0 +1,15 @@
+warning: failed to load external entity "/work/espla/kazakh/Projects/apertium-eng-kaz/translate-to-default-equivalent.xsl"
+cannot parse /work/espla/kazakh/Projects/apertium-eng-kaz/translate-to-default-equivalent.xsl
+Temporary directory: /work/espla/kazakh/Projects/apertium-eng-kazMIQUEL
+Checking whether 'lt-proc' is in the PATH: 
+OK
+Checking whether 'apertium-symmetrize-alignments' is in the PATH: 
+OK
+Checking whether needed GIZA++ executables are found in GIZA++ dir: 
+plain2snt.out OK
+snt2plain.out OK
+../mkcls-v2/mkcls OK
+GIZA++ OK
+END.
+END.
+make: *** [train-giza++-eng-kaz/RL/GIZA++.A3.final] Interrupción

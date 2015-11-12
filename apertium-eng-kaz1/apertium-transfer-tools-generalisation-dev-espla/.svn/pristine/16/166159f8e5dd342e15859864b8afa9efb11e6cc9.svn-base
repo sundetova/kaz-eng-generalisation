@@ -1,0 +1,16 @@
+abbrtype:acc,dat,gen,ins,loc,nom,voc:abbr,adj
+adjtype:comp,pst,ssup,sup:adj
+genderat:f,ma,mfn,mi,nt
+numberat:sg,pl
+defin:def,ind
+advtype:comp,ssup,sup:adv
+nptype:al,ant,cog,top
+numtype:coll,ord
+parttype:itg,neg:part
+prntype:ind,itg,neg,pers,pos,rel,tot:prn
+isprnref:ref:prn
+person:p1,p3,p3
+perftype:imperf,perf
+mode:ref,tv,iv,clt,futII:vbhaver,vblex
+tense:pprs,imp,inf,lp,pii,pres,aor,futI:vbhaver,vblex
+isvbadv:adv:vblex,vbhaver

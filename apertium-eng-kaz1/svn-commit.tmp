@@ -1,0 +1,10 @@
+
+--This line, and those below, will be ignored--
+
+M    apertium-eng-kaz.eng-kaz.dix
+M    apertium-eng-kaz.eng.dix
+M    mteval/eng.xml
+M    mteval/kaz-ref.txt
+M    mteval/kaz-ref.xml
+M    mteval/kaz.txt
+M    mteval/kaz.xml

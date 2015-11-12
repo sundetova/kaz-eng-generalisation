@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mteval SYSTEM "mteval-xml-v1.5a.dtd">
+<mteval>
+<tstset setid="apertium" srclang="en" trglang="es" sysid="apertium" refid="zzz">
+<doc docid="zzz" genre="nw">
+<seg id="1">Estos son algunas líneas  de texto para probar el uso de evaluación automática .</seg>
+<seg id="2">Por la mañana , una lección encima cómo la traducción automática puede ser integrada en predicción de traducción interactiva , y el Universitat d'Alacant búsqueda en este campo .</seg>
+<seg id="3">Algunos de la discusión serán más ligeros cuando muchos de los recursos están compartidos .</seg>
+<seg id="4">Cuándo paseo de mujeres , y nuestros podómetros siguen nuestras zancadas , hay nada particular aproximadamente lo . </seg>
+<seg id="5">En el atrás de la multitud unas cuantas chicas jóvenes estuvieron aguantar homemade pancartas. </seg>
+<seg id="6">El capitán del Costa Concordia dice un tribunal  retrase sonar la alarma en el barco de crucero del hundimiento porque tema que las personas saltarían fuera .</seg>
+</doc>
+</tstset>
+</mteval>

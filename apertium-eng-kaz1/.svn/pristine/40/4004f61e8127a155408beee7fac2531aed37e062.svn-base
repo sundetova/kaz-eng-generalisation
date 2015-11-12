@@ -1,0 +1,26 @@
+Fri Oct 23 12:13:34 CEST 2015
+===============================================
+POS	Total	Clean	With @	With #	Clean %
+vblex	1455		0	0	
+n	956		0	0	
+adv	500		0	0	
+np	205		0	0	
+prn	82		0	0	
+pr	52		0	0	
+adj	52		0	1	
+num	26		0	0	
+cnjadv	18		0	0	
+preadv	13		0	0	
+vaux	10		0	0	
+cnjcoo	7		0	0	
+vbser	6		0	0	
+rel	5		0	0	
+vbhaver	3		0	0	
+ij	2		0	0	
+vbmod	1		0	0	
+det	1		0	0	
+cnjsub	1		0	0	
+guio	0		0	0	
+cm	0		0	0	
+abbr	0		0	0	
+===============================================

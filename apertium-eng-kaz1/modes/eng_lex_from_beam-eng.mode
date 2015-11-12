@@ -1,0 +1,1 @@
+sed 's_\^\([^#$]*\)[#]\([^<$]*\)\(<[^$]*\)\$_^\1\3#\2$_g'  | apertium-posttransfer -x  /home/apertium/apertium-testing/apertium-eng-kaz/apertium-transfer-tools-generalisation-dev-espla/phrase-extraction/transfer-tools-scripts/apertium-kaz-eng.posttransfer.ptx | lt-proc $1 /home/apertium/apertium-testing/apertium-eng-kaz/kaz-eng.autogen.bin

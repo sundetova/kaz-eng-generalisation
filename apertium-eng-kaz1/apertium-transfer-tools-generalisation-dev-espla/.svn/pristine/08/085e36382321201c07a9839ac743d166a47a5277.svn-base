@@ -1,0 +1,17 @@
+adj:isadjsint,issubst,attruse,numberat,possessive,case
+adv:advtype,attruse
+det:determinertype,numberat
+n:numberat,possessive,form,case,attruse
+np:nptype,gender,numberat,possessive,case
+num:numtype,issubst,numberat,attruse,possessive,case
+prn:prntype,form,attruse,negative,person,possessive,gender,numberat,form,case,isadv
+rel:reltype,gender,numberat
+vaux:negative,verbtime,form,person,numberat,attruse,possessive,mode
+vbdo:verbtime,person,numberat
+vbhaver:verbtime,person,numberat
+vblex:isvbpron,verbtype,negative,verbtime,person,numberat
+v:verbtype,issepverb,derivation,negative,verbtime,evid,person,form,numberat,possessive,attruse,case
+vbmod:verbtime,person,numberat
+vbser:verbtime,person,numberat
+cop:negative,verbtime,evid,possessive,person,numberat
+post:posttransfer

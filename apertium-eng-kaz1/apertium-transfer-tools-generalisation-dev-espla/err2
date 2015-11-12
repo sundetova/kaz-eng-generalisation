@@ -1,0 +1,17 @@
+Temporary directory: /home/mespla/Projects/apertium-eng-kazMIQUEL
+Checking whether 'lt-proc' is in the PATH: 
+OK
+Checking whether 'apertium-symmetrize-alignments' is in the PATH: 
+OK
+Checking whether needed GIZA++ executables are found in GIZA++ dir: 
+plain2snt.out OK
+snt2plain.out OK
+../mkcls-v2/mkcls OK
+GIZA++ OK
+Bilingual phrase extraction directory already exists. Omitting bilingual phrase extraction.
+AT generalisation direrctory already exists. Omitting AT generalisation.
+AT minimisation directory already exists. Omitting AT minimisation.
+Beam search directory already exists. Omitting Beam search.
+Selection of lexical categories directory already exists. Omitting lexical category selection.
+gzip: /home/mespla/Projects/apertium-eng-kazMIQUEL/tuning-proportion_correct_bilphrases_thresholdextendedrangerelaxdynamic1000above2-0-0.05-1-subrules/result-f-1.00.gz: No such file or directory
+Warning: empty y range [0:0], adjusting to [-1:1]

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mteval SYSTEM "mteval-xml-v1.5a.dtd">
+<mteval>
+<refset setid="apertium" srclang="eng" trglang="kaz" sysid="apertium-eng-kaz" refid="zzz">
+<doc docid="zzz" genre="nw">

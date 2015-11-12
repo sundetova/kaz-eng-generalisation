@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mteval SYSTEM "mteval-xml-v1.5a.dtd">
+<mteval>
+<srcset setid="apertium" srclang="en" trglang="es" sysid="apertium" refid="zzz">
+<doc docid="zzz" genre="nw">
+<seg id="1">These are some lines of text to test the use of automatic evaluation .</seg>
+<seg id="2">In the morning , a lesson on how machine translation can be integrated in interactive translation prediction , and the Universitat d’Alacant research in this field .</seg>
+<seg id="3">Some of the discussion will be lighter as many of the resources are shared.</seg>
+<seg id="4">When women walk , and our pedometers track our strides , there is nothing particular about it . </seg>
+<seg id="5">At the back of the crowd a few young girls stood holding homemade banners . </seg>
+<seg id="6">The captain of the Costa Concordia tells a court he delayed sounding the alarm on the sinking cruise ship because he feared people would jump off .</seg>
+</doc>
+</srcset>
+</mteval>

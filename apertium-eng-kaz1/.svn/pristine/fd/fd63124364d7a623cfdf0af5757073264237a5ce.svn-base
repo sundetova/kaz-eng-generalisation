@@ -1,0 +1,150 @@
+<rules>
+
+ <rule>
+  <or>
+   <match lemma="қай" tags="det.*"/>
+   <match lemma="барлық" tags="det.*"/>
+  </or>
+   <match lemma="жер"><select lemma="place"/></match>
+ </rule>
+
+  
+ <rule>
+  <match lemma="Ол" tags="prn.pers.p3.sg.nom"><select lemma="she" tags="prn.subj.p3.f.*"/></match>
+  <match lemma="қыз" tags="n.*"/>
+ </rule>
+
+ <rule>
+  <match lemma="Ол" tags="prn.pers.p3.sg.nom"><select lemma="she" tags="prn.subj.p3.f.*"/></match>
+  <match lemma="әдемі" tags="adj"><select lemma="beautiful" tags="adj"/></match>
+  <match lemma="қыз" tags="n.*"/>
+ </rule>
+
+ <rule>
+  <match lemma="кітап" tags="n.*"/>
+  <match lemma="бет" tags="n.*.*"><select lemma="page" tags="n.*"/></match>     
+ </rule>
+
+ <rule>
+  <match lemma="су" tags="n.*"/>
+  <match lemma="бет" tags="n.*.*"><select lemma="surface" tags="n.*"/></match>     
+ </rule>
+
+ <rule>
+  <match lemma="әдемі" tags="adj"><select lemma="beautiful" tags="adj"/></match>
+ </rule>
+
+ <rule>
+  <match lemma="оның" tags="prn.pers.p3.sg.gen"><select lemma="his" tags="det.pos.sp"/></match>
+ </rule>
+
+ <rule>
+  <match lemma="онымен" tags="prn.pers.p3.sg.ins"><select lemma="him" tags="prn.obj.p3.m.sg"/></match>
+ </rule>
+
+ <rule>
+  <match lemma="бар" tags="v.iv.imp.*.*"><select lemma="have" tags="vblex.pres"/></match>
+ </rule>
+
+ <rule>
+  <match lemma="арт" tags="n.PXD.loc"><select lemma="behind" tags="pr"/></match>
+ </rule>
+
+ <rule>
+  <match lemma="жас" tags="n.*.loc.*"><select lemma="year" tags="n.pl"/><select lemma="old" tags="adj.sint"/></match>
+ </rule>
+ 
+ <rule>
+  <match lemma="Ол" tags="prn.pers.p3.sg.nom"><select lemma="she" tags="prn.subj.p3.f.*"/></match>
+  <match lemma="әдемі" tags="adj"><select lemma="beautiful" tags="adj"/></match>
+  <match lemma="қыз" tags="n.*"/>
+ </rule>
+
+ <rule>
+  <match lemma="үст" tags="n.px3sp.loc"><select lemma="on" tags="pr"/></match>
+ </rule>
+
+ <rule>
+  <match lemma="аст" tags="n.px3sp.loc"><select lemma="under" tags="pr"/></match>
+ </rule>
+
+ <rule>
+  <match lemma="алд" tags="n.px3sp.loc"><select lemma="front" tags="pr"/></match>
+ </rule>
+
+ <rule>
+  <match lemma="үй" tags="n.*"><select lemma="home" tags="n.*"/></match>
+  <match lemma="*" tags="v.*"/>
+ </rule>
+
+ <rule>
+  <match lemma="үй" tags="n.*"><select lemma="house" tags="n.*"/></match>
+ </rule>
+
+ <rule>
+  <match lemma="арқылы" tags="post"><select lemma="through" tags="pr"/></match>
+ </rule>
+
+ <rule>
+  <or>
+   <match lemma="институт" tags="n.loc"/>
+   <match lemma="университет" tags="n.loc"/>
+  </or>
+   <match lemma="оқы" tags="v.*"><select lemma="study" tags="vblex.*"/></match>
+ </rule>
+ 
+ 			<!--NEW RULES-->
+<!--Doesn't work--> 
+<rule>
+  <match lemma="бал" tags="n.*"/>
+  <match lemma="ара" tags="n.*.*"><select lemma="bee" tags="n.*"/></match>     
+ </rule>
+
+ <!--
+ <rule>
+  <match lemma="су" tags="n.*"/>
+  <match lemma="бет" tags="n.*.*"><select lemma="surface" tags="n.*"/></match>     
+ </rule>
+ -->
+
+<rule>
+    <match lemma="интернет" tags="n.*"/>
+      <match lemma="жарнама" tags="n.*"><select lemma="banner" tags="n.*"/></match>
+
+ </rule>
+ 
+<rule>
+  <match lemma="жарнама" tags="n.*"><select lemma="advertisement" tags="n.*"/></match>
+ </rule>
+
+ <rule>
+  <or>
+   <match lemma="қаңтар" tags="n.*"/>
+  <match lemma="ақпан" tags="n.*"/>
+<match lemma="наурыз" tags="n.*"/>
+<match lemma="сәуір" tags="n.*"/>
+<match lemma="мамыр" tags="n.*"/>
+<match lemma="маусым" tags="n.*"/>
+<match lemma="шілде" tags="n.*"/>
+<match lemma="тамыз" tags="n.*"/>
+<match lemma="қыркүйек" tags="n.*"/>
+<match lemma="қазан" tags="n.*"/>
+<match lemma="қараша" tags="n.*"/>
+<match lemma="желтоқсан" tags="n.*"/>
+  </or>
+   <match lemma="ай" tags="n.px3sp.*"><select lemma="month" tags="n.*"/></match>
+ </rule>
+
+<rule>
+  <match lemma="Сіз" tags="prn.pers.p2.*.*.gen"><select lemma="You" tags="prn.subj.p2.*.*"/></match>
+  <match lemma="*" tags="v.*.prc_vol.*.*"/>
+ </rule>
+
+
+<rule>
+  <match lemma="мен" tags="prn.pers.*"><select lemma="I" tags="prn.subj"/></match>
+  <match lemma="*" tags="v.*.prc_vol.*"/>
+ 
+ </rule>
+
+</rules>

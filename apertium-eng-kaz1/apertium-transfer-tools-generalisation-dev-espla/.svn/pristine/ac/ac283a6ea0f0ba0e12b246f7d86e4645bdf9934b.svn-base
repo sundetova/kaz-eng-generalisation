@@ -1,0 +1,17 @@
+adjtype:comp,sup:adj
+isadjsint:sint:adj
+determinertype:def,ind,dem,itg,ord,pos,qnt:det
+ntype:n, acr
+nptype:loc,ant,al,cog,top
+numtype:ord,year:num
+isprnref:ref:prn
+prntype:itg,obj,neg,pos,subj,tn,dem,pers :prn
+reltype:aa,an,nn,adv:rel
+verbtime:inf,past,pres,subs,pprs,ger,pp,ifi,fut,aor,imp
+verbtype:iv,tv
+isvbpron:pron,sep
+gender:m,f,mf,nt
+numberat:sg,pl,sp,ND
+person:p1,p2,p3,PD
+possessive:px3sp,px1sg,px2sg,px1pl,px2pl,px3pl
+

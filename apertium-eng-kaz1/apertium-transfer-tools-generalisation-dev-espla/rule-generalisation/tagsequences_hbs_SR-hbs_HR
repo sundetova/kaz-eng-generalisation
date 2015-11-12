@@ -1,0 +1,14 @@
+adj:adjtype,gender,numberat,case,adjaspect
+adv:advtype
+n:gender,numberat,case
+num:numtype,gender,numberat,case
+pr:case
+np:nptype,gender,numberat,case
+part:parttype
+abbr:case
+prn:isrefprn,ispos,prntype,isclt,person,gender,numberat,case
+vblex:verbaspect,verbtype,isrefvb,verbtime,isadv,issfx,person,gender,numberat
+vbmod:isclt,verbaspect,verbtype,isrefvb,verbtime,isadv,issfx,person,gender,numberat
+vbhaver:verbaspect,verbtype,isrefvb,verbtime,isadv,issfx,person,gender,numberat
+vbser:isclt,verbaspect,verbtype,isrefvb,verbtime,isadv,issfx,person,gender,numberat
+

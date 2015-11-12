@@ -1,0 +1,47 @@
+sudo apt-get install libxml2
+sudo apt-get install libpcre3 libpcre3-dev
+
+svn co https://svn.code.sf.net/p/apertium/svn/trunk/lttoolbox
+svn co https://svn.code.sf.net/p/apertium/svn/trunk/apertium
+
+cd lttoolbox
+ patch -p0 < ../apertium-eng-kaz/apertium-transfer-tools-generalisation-dev-espla/apertium-patch/lttoolbox-diff
+PKG_CONFIG_PATH=/usr/local/lib/pkgconfig ./autogen.sh
+make
+sudo make install
+sudo ldconfig
+
+
+cd apertium
+patch -p0 < ../apertium-eng-kaz/apertium-transfer-tools-generalisation-dev-espla/apertium-patch/apertium-diff
+
+PKG_CONFIG_PATH=/usr/local/lib/pkgconfig ./autogen.sh
+make
+sudo make install
+sudo ldconfig
+
+
+sudo apt-get install python-pip
+
+http://pip.readthedocs.org/en/stable/installing/
+
+python get-pip.py
+sudo pip install --upgrade pip
+
+sudo apt-get install moreutils
+
+sudo pip install pulp
+sudo pip install argparse
+
+cd apert-tr-espla
+
+$ cd phrase-extraction
+$ ./autogen.sh 
+$ ./configure && make
+
+and as a root
+
+# make install
+
+
+

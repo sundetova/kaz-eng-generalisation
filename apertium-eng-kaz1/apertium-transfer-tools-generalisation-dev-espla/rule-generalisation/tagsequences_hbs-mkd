@@ -1,0 +1,13 @@
+abbr:abbrtype
+adj:adjtype,genderat,numberat,abbrtype,defin
+adv:advtype
+n:genderat,numberat,abbrtype
+np:nptype,genderat,numberat,abbrtype
+num:numtype,genderat,numberat,abbrtype,defin
+part:parttype
+pr:abbrtype
+prn:isprnref,prntype,person,genderat,numberat,abbrtype,defin
+vbhaver:perftype,mode,tense,isvbadv,person,genderat,numberat
+vblex:perftype,mode,tense,isvbadv,person,genderat,numberat
+vbmod:perftype,mode,tense,isvbadv,person,genderat,numberat
+vbser:perftype,mode,tense,isvbadv,person,genderat,numberat

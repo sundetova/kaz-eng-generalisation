@@ -1,0 +1,3 @@
+    
+    lt-proc -w /home/apertium/apertium-testing/apertium-eng-kaz/eng-kaz.automorf.bin |cg-proc -w /home/apertium/apertium-testing/apertium-eng-kaz/eng-kaz.rlx.bin |apertium-tagger -g $2 /home/apertium/apertium-testing/apertium-eng-kaz/eng-kaz.prob |apertium-pretransfer|lt-proc -b /home/apertium/apertium-testing/apertium-eng-kaz/eng-kaz.autobil.bin 
+  
